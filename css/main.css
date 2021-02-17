@@ -6,8 +6,8 @@
   --text-light: ;
   --bg-color: ;
   --white: #fff;
-  --midnight: #b79748;
-  --sky: linear-gradient(to top, #9890e3 0%, #b1f4cf 100%);
+  --midnight: #f6d365;
+  --sky: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
 }
 /* END OF CSS VARIABLE */
 /* UNIVERSAL STYLES */
@@ -43,8 +43,10 @@ button.btn {
   border: none;
   border-radius: 2rem;
   padding: 1rem 3rem;
-  font-size: 1rem;
+  font-size: 1.5rem;
   cursor: pointer;
+  color: var(--text-gray);
+  font-weight: bold;
 }
 .flex-row {
   display: flex;
@@ -57,7 +59,7 @@ button.btn {
   background: white;
   padding: 0 2rem;
   height: 0rem;
-  min-height: 10vh;
+  min-height: 50px;
   overflow: hidden;
   transition: height 1s ease-in-out;
 }
@@ -66,36 +68,39 @@ button.btn {
 }
 .nav .toggle-collapse {
   position: absolute;
-  top: 0;
-  width: 90%;
+  top: 0%;
+  right: 32px;
   cursor: pointer;
   display: none;
 }
 .nav .toggle-collapse .toggle-icons {
   display: flex;
   justify-content: flex-end;
-  padding: 1.7rem 0;
+  padding: 1rem 0;
 }
 .nav .toggle-collapse .toggle-icons i {
   font-size: 1.4rem;
   color: var(--text-gray);
 }
 .collapse {
-  height: 30rem;
+  height: 25rem;
 }
 .nav .nav-items {
   display: flex;
   margin: 0;
 }
 .nav .nav-items .nav-link {
-  padding: 1.6rem 1rem;
+  padding: 1rem 1rem;
   font-size: 1.1rem;
   position: relative;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
+}
+.nav .nav-items .nav-link a {
+  padding: 2rem 0;
 }
 .nav .nav-brand a {
   font-size: 1.6rem;
-  padding: 1rem 0;
+  padding: 0.8rem 0;
   display: block;
   font-size: 1.6rem;
 }
@@ -106,10 +111,10 @@ button.btn {
   color: var(--white);
 }
 .nav .social {
-  padding: 1.4rem 0;
+  padding: 1rem 0;
 }
 .nav .social i {
-  padding: 0 0.2.rem;
+  padding: 0 0.2rem;
 }
 .nav .social i:hover {
   color: var(--midnight);
@@ -127,7 +132,7 @@ main .site-title {
 main .site-title .site-background {
   padding-top: 10rem;
   text-align: center;
-  color: var(--midnight);
+  color: var(--text-gray);
 }
 main .site-title h1,
 h3 {
@@ -140,13 +145,14 @@ main .site-title .btn {
 main .site-title .btn:hover {
   background: transparent;
   border: 1px solid var(--white);
-  color: var(--midnight);
+  color: var(--text-gray);
+  font-weight: bold;
 }
 /* END OF BANNER SECTION */
 /* END OF MAIN SECTION */
 
-/* Viewport less than or equal to 750px */
-@media only screen and (max-width: 750px) {
+/* Viewport less than or equal to 800px */
+@media only screen and (max-width: 800px) {
   .nav .nav-menu,
   .nav .nav-items {
     flex-direction: column;
