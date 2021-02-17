@@ -2,6 +2,12 @@
 /* CSS VARIABLE */
 :root {
   --Courier: "CourierPrime", sans-serif;
+  --text-gray: #4868b7;
+  --text-light: ;
+  --bg-color: ;
+  --white: #fff;
+  --midnight: #b79748;
+  --sky: linear-gradient(to top, #9890e3 0%, #b1f4cf 100%);
 }
 /* END OF CSS VARIABLE */
 /* UNIVERSAL STYLES */
@@ -20,6 +26,7 @@ body {
 /* GLOBAL CLASSES */
 a {
   text-decoration: none;
+  color: var(--text-gray);
 }
 ul {
   list-style-type: none;
@@ -49,13 +56,27 @@ ul {
   padding: 1.6rem 1rem;
   font-size: 1.1rem;
   position: relative;
+  font-size: 1.2rem;
 }
 .nav .nav-brand a {
   font-size: 1.6rem;
   padding: 1rem 0;
   display: block;
+  font-size: 1.6rem;
+}
+.nav .nav-items .nav-link:hover {
+  background-color: var(--midnight);
+}
+.nav .nav-items .nav-link:hover a {
+  color: var(--white);
 }
 .nav .social {
   padding: 1.4rem 0;
+}
+.nav .social i {
+  padding: 0 0.2.rem;
+}
+.nav .social i:hover {
+  color: var(--midnight);
 }
 /* END OF NAVBAR STYLES*/
