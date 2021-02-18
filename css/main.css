@@ -1,0 +1,27 @@
+@import url("https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400&display=swap");
+
+/* font-family: 'Courier Prime', monospace; */
+
+/* ROOT STYLING */
+:root {
+  --light: #f8f9fa;
+  --secondary: #adb5bd;
+  --dark: #343a40;
+  --primary-color: #f15bb5;
+  --secondary-color: #2ec4b6;
+  --border: #e9ecef;
+}
+
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: "Courier Prime", monospace;
+  padding: 0;
+  margin: 0;
+}
+a {
+  text-decoration: none;
+}
+/* GLOBAL STYLING */
+/* SECTION STYLING */
