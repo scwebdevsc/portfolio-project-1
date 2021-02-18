@@ -44,6 +44,29 @@ a {
   padding: 0 15px;
   margin: auto;
 }
+.img-fluid {
+  width: 100%;
+}
+.text-title {
+  font-weight: bold;
+}
+.secondary-title {
+}
+.display-1 {
+  font-size: 22px;
+}
+.display-2 {
+  font-size: 16px;
+}
+.display-3 {
+  font-size: 14px;
+}
+.text-center {
+  text-align: center;
+}
+.text-right {
+  text-align: right;
+}
 /* SECTION STYLING */
 /* NAVIGATION MENU STYLING */
 .navbar {
@@ -88,6 +111,21 @@ a {
   outline: none;
 }
 /* END OF NAVIGATION MENU STYLING*/
+/* MAIN SECTION */
+#site-main {
+  margin-top: 8em;
+}
+#posts {
+  margin-bottom: 8em;
+}
+.grid {
+  margin: 0 auto;
+}
+.grid .grid-item {
+  width: calc(33.3333% - 20px);
+  margin-bottom: 3em;
+}
+/* END OF MAIN */
 /* MEDIA QUERY FOR HEADER SECTION */
 @media (max-width: 1031px) {
   .navbar {
