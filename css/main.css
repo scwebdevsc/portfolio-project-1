@@ -48,7 +48,19 @@ a {
   width: fit-content;
   font-size: 4em;
   position: relative;
-  color: white;
+  color: transparent;
+  animation: text_reveal 0.5s ease forwards;
+  animation-delay: 1.5s;
+}
+#hero h1 span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0;
+  background-color: #4c4845;
+  animation: text_reveal_box 1s ease;
+  animation-delay: 1s;
 }
 #hero .cta {
   display: inline-block;
@@ -60,6 +72,27 @@ a {
   text-transform: uppercase;
   letter-spacing: 0.1em;
   margin-top: 30px;
-  transition: 0.3s ease background-color;
+  transition: 0.3s ease;
+  transition-property: background-color;
+}
+#hero .cta:hover {
+  background: #4c4845;
 }
 /* END OF HERO SECTION STYLES */
+/* KEYFRAMES */
+@keyframes text_reveal_box {
+  50% {
+    width: 100%;
+    left: 0;
+  }
+  100% {
+    width: 0;
+    left: 100%;
+  }
+}
+@keyframes text_reveal {
+  100% {
+    color: white;
+  }
+}
+/* END OF KEYFRAMES */
