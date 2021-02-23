@@ -7,6 +7,7 @@ font-family: 'Courier Prime', monospace;
 :root {
   --primary-grey: #4c4845;
   --primary-green: #80b918;
+  --primaryBorder: 2px solid var(--primary-green);
 }
 * {
   padding: 0;
@@ -20,6 +21,9 @@ html {
 }
 a {
   text-decoration: none;
+}
+ul {
+  list-style: none;
 }
 .container {
   min-height: 100vh;
@@ -55,22 +59,32 @@ p {
 .section-title span {
   color: var(--primary-green);
 }
-.section-content {
-  max-width: 1200px;
-  margin: 0 auto;
-}
 .section-line {
   width: 100px;
   height: 5px;
   margin: 15px auto 30px auto;
   background-color: var(--primary-green);
 }
+.section-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 30px;
+}
+.keywords li {
+  display: inline-block;
+  font-size: 1.6rem;
+  border: var(--primaryBorder);
+  border-radius: 20px;
+  margin-top: 20px;
+  margin-right: 20px;
+  padding: 10px;
+}
 .cta {
   display: inline-block;
   padding: 20px 60px;
   color: white;
   background-color: transparent;
-  border: 2px solid var(--primary-green);
+  border: var(--primaryBorder);
   border-radius: 20px;
   font-size: 2.5rem;
   font-weight: bold;
