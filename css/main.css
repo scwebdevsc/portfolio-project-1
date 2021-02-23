@@ -3,6 +3,11 @@ font-family: 'Courier Prime', monospace;
 */
 @import url("https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@1,400;1,700&display=swap");
 /* GLOBAL STYLES */
+/* CSS VARIABLES */
+:root {
+  --primary-grey: #4c4845;
+  --primary-green: #80b918;
+}
 * {
   padding: 0;
   margin: 0;
@@ -39,23 +44,29 @@ p {
 }
 .section-title {
   font-size: 4rem;
-  font-weight: 300;
+  font-weight: 700;
   color: black;
+  padding-top: 70px;
   margin-bottom: 10px;
   text-transform: uppercase;
   letter-spacing: 0.2rem;
   text-align: center;
 }
 .section-title span {
-  color: greenyellow;
+  color: var(--primary-green);
 }
-
+.section-line {
+  width: 100px;
+  height: 5px;
+  margin: 15px auto 30px auto;
+  background-color: var(--primary-green);
+}
 .cta {
   display: inline-block;
   padding: 10px 30px;
   color: white;
   background-color: transparent;
-  border: 2px solid greenyellow;
+  border: 2px solid var(--primary-green);
   border-radius: 20px;
   font-size: 2rem;
   text-transform: uppercase;
@@ -66,15 +77,15 @@ p {
 }
 .cta:hover {
   color: white;
-  background-color: #4c4845;
+  background-color: var(--primary-grey);
 }
 .brand h1 {
-  font-size: 3rem;
+  font-size: 3.5rem;
   text-transform: uppercase;
   color: white;
 }
 .brand h1 span {
-  color: greenyellow;
+  color: var(--primary-green);
 }
 /* HEADER SECTION */
 #header {
@@ -96,13 +107,13 @@ p {
   justify-content: space-between;
   width: 100%;
   height: 100%;
-  max-width: 1300px;
+  max-width: 1200px;
   padding: 0 10px;
 }
 #header .nav-list ul {
   list-style: none;
   position: absolute;
-  background-color: rgb(31, 30, 30);
+  background-color: var(--primary-grey);
   width: 100vw;
   height: 100vh;
   left: 100%;
@@ -145,7 +156,7 @@ p {
   letter-spacing: initial;
 }
 #header .nav-list ul li:hover a {
-  color: greenyellow;
+  color: var(--primary-green);
 }
 #header .hamburger {
   height: 60px;
@@ -227,7 +238,7 @@ p {
 #hero .hero {
   max-width: 1200px;
   margin: 0 auto;
-  padding-top: 100px;
+  padding-top: 250px;
   justify-content: center;
   align-items: flex-start;
 }
@@ -256,7 +267,7 @@ p {
   left: 0;
   height: 100%;
   width: 0;
-  background-color: greenyellow;
+  background-color: var(--primary-green);
   animation: text_reveal_box 1s ease;
   animation-delay: 0.5s;
 }
@@ -300,7 +311,7 @@ p {
 }
 @keyframes text_reveal_name {
   100% {
-    color: greenyellow;
+    color: var(--primary-green);
     font-weight: 500;
   }
 }
@@ -318,7 +329,7 @@ p {
 
   /* HERO */
   #hero h1 {
-    font-size: 7rem;
+    font-size: 8rem;
   }
 }
 /* END OF HERO */
@@ -340,7 +351,7 @@ p {
     display: inline-block;
   }
   #header .nav-list ul li a {
-    font-size: 1.8rem;
+    font-size: 2.5rem;
   }
   #header .nav-list ul a:after {
     display: none;
