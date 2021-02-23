@@ -1,16 +1,13 @@
-/* GOOGLE FONTS 
-font-family: 'Courier Prime', monospace;
-*/
-@import url("https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&display=swap");
-/* GLOBAL STYLES */
+@import "https://fonts.googleapis.com/css?family=Montserrat:300, 400, 700&display=swap";
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
 html {
-  font-size: 12px;
-  font-family: "Courier Prime", monospace;
+  font-size: 10px;
+  font-family: "Montserrat", sans-serif;
+  scroll-behavior: smooth;
 }
 a {
   text-decoration: none;
@@ -23,8 +20,60 @@ a {
   align-items: center;
   justify-content: center;
 }
-/* END OF GLOBAL STYLES */
-/* HEADER SECTION STYLES */
+img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+p {
+  color: black;
+  font-size: 1.4rem;
+  margin-top: 5px;
+  line-height: 2.5rem;
+  font-weight: 300;
+  letter-spacing: 0.05rem;
+}
+.section-title {
+  font-size: 4rem;
+  font-weight: 300;
+  color: black;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  text-align: center;
+}
+.section-title span {
+  color: greenyellow;
+}
+
+.cta {
+  display: inline-block;
+  padding: 10px 30px;
+  color: white;
+  background-color: transparent;
+  border: 2px solid greenyellow;
+  border-radius: 20px;
+  font-size: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  margin-top: 30px;
+  transition: 0.3s ease;
+  transition-property: background-color, color;
+}
+.cta:hover {
+  color: white;
+  background-color: #4c4845;
+}
+.brand h1 {
+  font-size: 3rem;
+  text-transform: uppercase;
+  color: white;
+}
+.brand h1 span {
+  color: greenyellow;
+}
+
+/* Header section */
 #header {
   position: fixed;
   z-index: 1000;
@@ -35,35 +84,40 @@ a {
 }
 #header .header {
   min-height: 8vh;
-  background-color: rgba(76, 72, 69, 0.25);
+  background-color: rgba(31, 30, 30, 0.24);
+  transition: 0.3s ease background-color;
 }
-.header .navbar {
+#header .nav-bar {
   display: flex;
   align-items: center;
   justify-content: space-between;
   width: 100%;
   height: 100%;
-  max-width: 1200px;
+  max-width: 1300px;
   padding: 0 10px;
 }
 #header .nav-list ul {
   list-style: none;
   position: absolute;
-  background-color: rgb(76, 72, 69);
+  background-color: rgb(31, 30, 30);
   width: 100vw;
   height: 100vh;
-  left: 0%;
+  left: 100%;
   top: 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   z-index: 1;
-  overflow: hidden;
+  overflow-x: hidden;
+  transition: 0.5s ease left;
+}
+#header .nav-list ul.active {
+  left: 0%;
 }
 #header .nav-list ul a {
   font-size: 2.5rem;
-  font-weight: 700;
+  font-weight: 500;
   letter-spacing: 0.2rem;
   text-decoration: none;
   color: white;
@@ -77,8 +131,8 @@ a {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) scale(0);
-  color: black;
-  font-size: 10rem;
+  color: rgba(240, 248, 255, 0.021);
+  font-size: 13rem;
   letter-spacing: 50px;
   z-index: -1;
   transition: 0.3s ease letter-spacing;
@@ -87,34 +141,111 @@ a {
   transform: translate(-50%, -50%) scale(1);
   letter-spacing: initial;
 }
-/* END OF HEADER SECTION STYLES */
-/* HERO SECTION STYLES */
+#header .nav-list ul li:hover a {
+  color: greenyellow;
+}
+#header .hamburger {
+  height: 60px;
+  width: 60px;
+  display: inline-block;
+  border: 3px solid white;
+  border-radius: 50%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+  cursor: pointer;
+  transform: scale(0.8);
+  margin-right: 20px;
+}
+#header .hamburger:after {
+  position: absolute;
+  content: "";
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+  border: 3px solid white;
+  animation: hamburger_puls 1s ease infinite;
+}
+#header .hamburger .bar {
+  height: 2px;
+  width: 30px;
+  position: relative;
+  background-color: white;
+  z-index: -1;
+}
+#header .hamburger .bar::after,
+#header .hamburger .bar::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  background-color: white;
+  transition: 0.3s ease;
+  transition-property: top, bottom;
+}
+#header .hamburger .bar::after {
+  top: 8px;
+}
+#header .hamburger .bar::before {
+  bottom: 8px;
+}
+#header .hamburger.active .bar::before {
+  bottom: 0;
+}
+#header .hamburger.active .bar::after {
+  top: 0;
+}
+/* End Header section */
+
+/* Hero Section */
 #hero {
-  background-image: url(/img/hero.jpg);
+  background-image: url(../img/hero.jpg);
   background-size: cover;
   background-position: top center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
   position: relative;
   z-index: 1;
 }
 #hero::after {
   content: "";
   position: absolute;
-  top: 0;
   left: 0;
+  top: 0;
   height: 100%;
   width: 100%;
   background-color: black;
   opacity: 0.7;
   z-index: -1;
 }
+#hero .hero {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-top: 100px;
+  justify-content: center;
+  align-items: flex-start;
+}
 #hero h1 {
   display: block;
   width: fit-content;
-  font-size: 4em;
+  font-size: 4rem;
   position: relative;
   color: transparent;
   animation: text_reveal 0.5s ease forwards;
-  animation-delay: 1.5s;
+  animation-delay: 1s;
+}
+#hero h1:nth-child(1) {
+  animation-delay: 1s;
+}
+#hero h1:nth-child(2) {
+  animation-delay: 2s;
+}
+#hero h1:nth-child(3) {
+  animation: text_reveal_name 0.5s ease forwards;
+  animation-delay: 3s;
 }
 #hero h1 span {
   position: absolute;
@@ -122,28 +253,33 @@ a {
   left: 0;
   height: 100%;
   width: 0;
-  background-color: #4c4845;
+  background-color: greenyellow;
   animation: text_reveal_box 1s ease;
-  animation-delay: 1s;
+  animation-delay: 0.5s;
 }
-#hero .cta {
-  display: inline-block;
-  padding: 10px 30px;
-  color: white;
-  background-color: transparent;
-  border: 2px solid white;
-  font-size: 2em;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  margin-top: 30px;
-  transition: 0.3s ease;
-  transition-property: background-color;
+#hero h1:nth-child(1) span {
+  animation-delay: 0.5s;
 }
-#hero .cta:hover {
-  background: #4c4845;
+#hero h1:nth-child(2) span {
+  animation-delay: 1.5s;
 }
-/* END OF HERO SECTION STYLES */
-/* KEYFRAMES */
+#hero h1:nth-child(3) span {
+  animation-delay: 2.5s;
+}
+
+/* End Hero Section */
+
+/* Keyframes */
+@keyframes hamburger_puls {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1.4);
+  }
+}
 @keyframes text_reveal_box {
   50% {
     width: 100%;
@@ -159,4 +295,51 @@ a {
     color: white;
   }
 }
-/* END OF KEYFRAMES */
+@keyframes text_reveal_name {
+  100% {
+    color: greenyellow;
+    font-weight: 500;
+  }
+}
+/* End Keyframes */
+
+/* Media Query For Tablet */
+@media only screen and (min-width: 768px) {
+  .cta {
+    font-size: 2.5rem;
+    padding: 20px 60px;
+  }
+  h1.section-title {
+    font-size: 6rem;
+  }
+
+  /* Hero */
+  #hero h1 {
+    font-size: 7rem;
+  }
+}
+/* End Hero */
+
+/* Media Query For Desktop */
+@media only screen and (min-width: 1200px) {
+  /* header */
+  #header .hamburger {
+    display: none;
+  }
+  #header .nav-list ul {
+    position: initial;
+    display: block;
+    height: auto;
+    width: fit-content;
+    background-color: transparent;
+  }
+  #header .nav-list ul li {
+    display: inline-block;
+  }
+  #header .nav-list ul li a {
+    font-size: 1.8rem;
+  }
+  #header .nav-list ul a:after {
+    display: none;
+  }
+}
