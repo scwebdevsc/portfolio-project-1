@@ -36,7 +36,7 @@ img {
 }
 p {
   color: black;
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   margin-top: 5px;
   line-height: 2.5rem;
   font-weight: 300;
@@ -46,7 +46,7 @@ p {
   font-size: 6rem;
   font-weight: 700;
   color: black;
-  padding-top: 70px;
+  padding-top: 80px;
   margin-bottom: 10px;
   text-transform: uppercase;
   letter-spacing: 0.2rem;
@@ -54,6 +54,10 @@ p {
 }
 .section-title span {
   color: var(--primary-green);
+}
+.section-content {
+  max-width: 1200px;
+  margin: 0 auto;
 }
 .section-line {
   width: 100px;
@@ -69,6 +73,7 @@ p {
   border: 2px solid var(--primary-green);
   border-radius: 20px;
   font-size: 2.5rem;
+  font-weight: bold;
   text-transform: uppercase;
   letter-spacing: 0.1rem;
   margin-top: 30px;
@@ -238,14 +243,14 @@ p {
 #hero .hero {
   max-width: 1200px;
   margin: 0 auto;
-  padding-top: 250px;
+  padding-top: 200px;
   justify-content: center;
   align-items: flex-start;
 }
 #hero h1 {
   display: block;
   width: fit-content;
-  font-size: 9rem;
+  font-size: 7rem;
   position: relative;
   color: transparent;
   animation: text_reveal 0.5s ease forwards;
@@ -282,6 +287,12 @@ p {
 }
 
 /* END OF HERO SECTION */
+
+/* ABOUT ME SECTION */
+.about-me__paragraph {
+  text-align: justify;
+}
+/* END OF ABOUT ME SECTION */
 
 /* KEYFRAMES */
 @keyframes hamburger_puls {
