@@ -1,4 +1,8 @@
-@import "https://fonts.googleapis.com/css?family=Montserrat:300, 400, 700&display=swap";
+/* GOOGLE FONTS 
+font-family: 'Courier Prime', monospace;
+*/
+@import url("https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@1,400;1,700&display=swap");
+/* GLOBAL STYLES */
 * {
   padding: 0;
   margin: 0;
@@ -6,7 +10,7 @@
 }
 html {
   font-size: 10px;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Courier Prime", monospace;
   scroll-behavior: smooth;
 }
 a {
@@ -72,8 +76,7 @@ p {
 .brand h1 span {
   color: greenyellow;
 }
-
-/* Header section */
+/* HEADER SECTION */
 #header {
   position: fixed;
   z-index: 1000;
@@ -198,9 +201,9 @@ p {
 #header .hamburger.active .bar::after {
   top: 0;
 }
-/* End Header section */
+/* END OF HEADER SECTION */
 
-/* Hero Section */
+/* HERO SECTION */
 #hero {
   background-image: url(../img/hero.jpg);
   background-size: cover;
@@ -267,9 +270,9 @@ p {
   animation-delay: 2.5s;
 }
 
-/* End Hero Section */
+/* END OF HERO SECTION */
 
-/* Keyframes */
+/* KEYFRAMES */
 @keyframes hamburger_puls {
   0% {
     opacity: 1;
@@ -301,9 +304,9 @@ p {
     font-weight: 500;
   }
 }
-/* End Keyframes */
+/* END OF KEYFRAMES */
 
-/* Media Query For Tablet */
+/* MEDIA QUERY FOR TABLET */
 @media only screen and (min-width: 768px) {
   .cta {
     font-size: 2.5rem;
@@ -313,14 +316,14 @@ p {
     font-size: 6rem;
   }
 
-  /* Hero */
+  /* HERO */
   #hero h1 {
     font-size: 7rem;
   }
 }
-/* End Hero */
+/* END OF HERO */
 
-/* Media Query For Desktop */
+/* MEDIA QUERY FOR DESKTOP */
 @media only screen and (min-width: 1200px) {
   /* header */
   #header .hamburger {
