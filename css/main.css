@@ -8,6 +8,7 @@ font-family: 'Courier Prime', monospace;
   --primary-grey: #4c4845;
   --primary-green: #80b918;
   --primaryBorder: 2px solid var(--primary-green);
+  --primaryTransition: 0.5s ease;
 }
 * {
   padding: 0;
@@ -22,6 +23,7 @@ html {
 a {
   text-decoration: none;
 }
+
 ul {
   list-style: none;
 }
@@ -91,7 +93,7 @@ p {
   text-transform: uppercase;
   letter-spacing: 0.1rem;
   margin-top: 30px;
-  transition: 0.3s ease;
+  transition: var(--primaryTransition);
   transition-property: background-color, color;
 }
 .cta:hover {
@@ -118,7 +120,7 @@ p {
 #header .header {
   min-height: 8vh;
   background-color: rgba(31, 30, 30, 0.24);
-  transition: 0.3s ease background-color;
+  transition: 0.5s ease background-color;
 }
 #header .nav-bar {
   display: flex;
@@ -176,6 +178,7 @@ p {
 }
 #header .nav-list ul li:hover a {
   color: var(--primary-green);
+  transition: var(--primaryTransition);
 }
 #header .hamburger {
   height: 60px;
@@ -344,6 +347,43 @@ p {
 
 /* END OF HERO */
 
+/* FOOTER */
+#footer {
+  width: 100%;
+  background-color: var(--primary-grey);
+}
+.copy-right {
+  padding: 20px 0;
+  text-align: center;
+  font-weight: bold;
+  color: white;
+}
+.copy-right a {
+  color: white;
+  text-decoration: underline;
+  transition: var(--primaryTransition);
+}
+.copy-right a:hover {
+  color: var(--primary-green);
+}
+.contact-me__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.contact-me__email {
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+}
+.contact-me__social {
+  font-size: 3rem;
+  padding: 20px;
+  border: 1px solid var(--primary-green);
+}
+/* END OF FOOTER */
+
 /* MEDIA QUERY FOR DESKTOP */
 @media only screen and (min-width: 1200px) {
   /* header */
@@ -362,6 +402,7 @@ p {
   }
   #header .nav-list ul li a {
     font-size: 2.5rem;
+    transition: var(--primaryTransition);
   }
   #header .nav-list ul a:after {
     display: none;
