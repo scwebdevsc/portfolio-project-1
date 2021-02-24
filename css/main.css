@@ -408,6 +408,11 @@ p {
   }
 }
 /* MEDIA QUERY FOR NAVBAR */
+@media only screen and (max-width: 600px) {
+  #header .nav-list ul a::after {
+    font-size: 5rem;
+  }
+}
 @media only screen and (max-width: 450px) {
   .brand h1 {
     font-size: 3rem;
@@ -418,9 +423,9 @@ p {
     font-size: 2.5rem;
   }
 }
-@media only screen and (max-width: 600px) {
-  #header .nav-list ul a::after {
-    font-size: 5rem;
+@media screen and (max-height: 500px) {
+  #header .nav-list ul a {
+    padding: 10px;
   }
 }
 /* MEDIA QUERY FOR HERO SECTION */
