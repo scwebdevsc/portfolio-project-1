@@ -97,7 +97,7 @@ p {
   transition-property: background-color, color;
 }
 .cta:hover {
-  color: white;
+  color: var(--primary-green);
   background-color: var(--primary-grey);
 }
 .brand h1 {
@@ -129,7 +129,7 @@ p {
   width: 100%;
   height: 100%;
   max-width: 1200px;
-  padding: 0 10px;
+  padding-left: 20px;
 }
 #header .nav-list ul {
   list-style: none;
@@ -268,6 +268,7 @@ p {
   display: block;
   width: fit-content;
   font-size: 7rem;
+  padding: 30px;
   position: relative;
   color: transparent;
   animation: text_reveal 0.5s ease forwards;
@@ -311,6 +312,43 @@ p {
 }
 /* END OF ABOUT ME SECTION */
 
+/* FOOTER */
+#footer {
+  width: 100%;
+  background-color: var(--primary-grey);
+}
+.copy-right {
+  padding: 20px 0;
+  text-align: center;
+  font-weight: bold;
+  color: white;
+}
+.copy-right a {
+  color: white;
+  text-decoration: underline;
+  transition: var(--primaryTransition);
+}
+.copy-right a:hover {
+  color: var(--primary-green);
+}
+.contact-me__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.contact-me__email {
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+}
+.contact-me__social {
+  font-size: 10rem;
+  margin-top: 30px;
+  color: #4267b2;
+}
+/* END OF FOOTER */
+
 /* KEYFRAMES */
 @keyframes hamburger_puls {
   0% {
@@ -345,46 +383,7 @@ p {
 }
 /* END OF KEYFRAMES */
 
-/* END OF HERO */
-
-/* FOOTER */
-#footer {
-  width: 100%;
-  background-color: var(--primary-grey);
-}
-.copy-right {
-  padding: 20px 0;
-  text-align: center;
-  font-weight: bold;
-  color: white;
-}
-.copy-right a {
-  color: white;
-  text-decoration: underline;
-  transition: var(--primaryTransition);
-}
-.copy-right a:hover {
-  color: var(--primary-green);
-}
-.contact-me__content {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-.contact-me__email {
-  font-size: 2rem;
-  font-weight: bold;
-  text-align: center;
-}
-.contact-me__social {
-  font-size: 3rem;
-  padding: 20px;
-  border: 1px solid var(--primary-green);
-}
-/* END OF FOOTER */
-
-/* MEDIA QUERY FOR DESKTOP */
+/* MEDIA QUERY FOR DESKTOP NAVBAR */
 @media only screen and (min-width: 1200px) {
   /* header */
   #header .hamburger {
@@ -408,3 +407,16 @@ p {
     display: none;
   }
 }
+/* MEDIA QUERY FOR NAVBAR */
+@media only screen and (max-width: 450px) {
+  .brand h1 {
+    font-size: 3rem;
+  }
+}
+@media only screen and (max-width: 380px) {
+  .brand h1 {
+    font-size: 2.5rem;
+  }
+}
+/* MEDIA QUERY FOR HERO SECTION
+
