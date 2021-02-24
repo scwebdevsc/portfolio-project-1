@@ -418,6 +418,11 @@ p {
     font-size: 2.5rem;
   }
 }
+@media only screen and (max-width: 600px) {
+  #header .nav-list ul a::after {
+    font-size: 5rem;
+  }
+}
 /* MEDIA QUERY FOR HERO SECTION */
 @media only screen and (max-width: 754px) {
   #hero h1 {
