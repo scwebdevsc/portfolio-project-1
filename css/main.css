@@ -268,7 +268,7 @@ p {
   display: block;
   width: fit-content;
   font-size: 7rem;
-  padding: 30px;
+  padding: 0 20px;
   position: relative;
   color: transparent;
   animation: text_reveal 0.5s ease forwards;
@@ -418,5 +418,75 @@ p {
     font-size: 2.5rem;
   }
 }
-/* MEDIA QUERY FOR HERO SECTION
-
+/* MEDIA QUERY FOR HERO SECTION */
+@media only screen and (max-width: 754px) {
+  #hero h1 {
+    font-size: 6.5rem;
+  }
+}
+@media only screen and (max-width: 703px) {
+  #hero h1 {
+    font-size: 6rem;
+  }
+}
+@media only screen and (max-width: 652px) {
+  #hero h1,
+  .section-title {
+    font-size: 5.5rem;
+  }
+}
+@media only screen and (max-width: 601px) {
+  #hero h1,
+  .section-title {
+    font-size: 5rem;
+  }
+}
+@media only screen and (max-width: 550px) {
+  #hero h1,
+  .section-title {
+    font-size: 4.5rem;
+  }
+}
+@media only screen and (max-width: 499px) {
+  #hero h1,
+  .section-title {
+    font-size: 4rem;
+  }
+  .cta {
+    font-size: 2rem;
+    padding: 10px 30px;
+  }
+}
+@media only screen and (max-width: 448px) {
+  #hero h1,
+  .section-title {
+    font-size: 3.5rem;
+  }
+}
+@media only screen and (max-width: 397px) {
+  #hero h1,
+  .section-title {
+    font-size: 3rem;
+  }
+}
+@media only screen and (max-width: 346px) {
+  #hero h1,
+  .section-title {
+    font-size: 2.5rem;
+  }
+}
+/* MEDIA QUERY FOR CONTACT ME SECTION */
+@media only screen and (max-width: 400px) {
+  .contact-me__email {
+    font-size: 1.2rem;
+  }
+  .contact-me__social {
+    font-size: 5rem;
+  }
+}
+/* MEDIA QUERY FOR FOOTER */
+@media only screen and (max-width: 435px) {
+  .copy-right {
+    font-size: 1.2rem;
+  }
+}
